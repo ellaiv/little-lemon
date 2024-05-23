@@ -4,19 +4,19 @@ import "./Nav.css";
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className="nav">
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a href="#">Home</a>
         </li>
         <li>
-          <a href="/about">About</a>
+          <a href="#">Services</a>
         </li>
         <li>
-          <a href="/services">Services</a>
+          <a href="#">About</a>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <a href="#">Contact</a>
         </li>
       </ul>
     </nav>

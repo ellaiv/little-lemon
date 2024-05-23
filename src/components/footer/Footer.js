@@ -3,7 +3,15 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
-  return <footer>{/* Content for footer */}</footer>;
+  return (
+    <footer className="footer">
+      <div className="contact-info">
+        <p>Address: 19/20 Royal Hibernian Way, Dublin</p>
+        <p>Phone: +353 1 905 8772</p>
+        <p>Email: info@littlelemonrestaurant.com</p>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
