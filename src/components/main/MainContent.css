@@ -1,3 +1,23 @@
 .main-content {
   padding: 20px;
 }
+
+.image {
+  max-width: 100%; /* Asigură că imaginea nu depășește lățimea containerului */
+  height: 350px;
+  width: 700px;
+  border-radius: 10px; /* Adaugă colțuri rotunjite imaginii */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adaugă o umbră subtilă imaginii */
+}
+
+.reservation-form-wrapper {
+  margin: 5px 0px 5px 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+}

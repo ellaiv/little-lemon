@@ -1,6 +1,8 @@
 .nav {
   background-color: #343a40;
   padding: 10px 20px;
+  text-align: center;
+  display: flex;
 }
 
 ul {
@@ -21,4 +23,12 @@ a {
 
 a:hover {
   color: lightgray;
+}
+
+.left {
+  margin-right: auto;
+}
+
+.right {
+  margin-left: auto;
 }

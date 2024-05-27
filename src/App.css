@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin: 20px; /* Margini exterioare de 20px */
+  background-color: white;
 }
 
 .App-header {
