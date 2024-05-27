@@ -1,19 +1,28 @@
 .nav {
-  background-color: #343a40;
-  padding: 10px 20px;
+  background-color: rgba(52, 58, 64, 0.915);
+  padding: 12px 50px;
   text-align: center;
+  align-items: center;
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
 }
 
 li {
-  display: inline;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 a {
@@ -22,13 +31,31 @@ a {
 }
 
 a:hover {
-  color: lightgray;
+  color: rgb(149, 181, 153);
 }
 
-.left {
-  margin-right: auto;
+ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fffffe;
+  border: 2px solid transparent;
+  border-radius: 7px;
+  font-size: 18px;
 }
 
-.right {
-  margin-left: auto;
+ul li a:hover {
+  border-color: #7aae79;
+}
+
+.left .MuiIconButton-root {
+  margin-right: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.right .MuiIconButton-root {
+  margin-left: 60px;
+  display: flex;
+  align-items: center;
 }

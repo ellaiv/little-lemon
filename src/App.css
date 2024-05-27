@@ -1,20 +1,3 @@
-.App {
-  text-align: center;
-  margin: 20px; /* Margini exterioare de 20px */
-  background-color: white;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+body {
+  background-image: linear-gradient(to bottom, #ffffff 0%, #e3f3b3 100%);
 }

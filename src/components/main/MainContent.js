@@ -9,7 +9,10 @@ const MainContent = ({ handleSubmit }) => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [guests, setGuests] = useState("");
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
   };
@@ -26,13 +29,23 @@ const MainContent = ({ handleSubmit }) => {
     setGuests(e.target.value);
   };
 
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+  };
+
+  const handleTimeChange = (e) => {
+    setTime(e.target.value);
+  };
+
   const submitForm = (e) => {
     e.preventDefault();
-    handleSubmit({ firstName, lastName, email, guests });
+    handleSubmit({ firstName, lastName, email, guests, date, time });
     setFirstName("");
     setLastName("");
     setEmail("");
     setGuests("");
+    setDate("");
+    setTime("");
   };
 
   return (
@@ -40,6 +53,7 @@ const MainContent = ({ handleSubmit }) => {
       {!formSubmitted ? (
         <div className="reservation-form-wrapper">
           <img src={siteLogo} alt="Site Logo" className="image" />
+          <h2>Book a table</h2> {/* Mutarea frazei după imagine */}
           <form onSubmit={submitForm} className="reservation-form">
             <label>
               First Name:
@@ -74,6 +88,24 @@ const MainContent = ({ handleSubmit }) => {
                 type="text"
                 value={guests}
                 onChange={handleGuestsChange}
+                required
+              />
+            </label>
+            <label>
+              Date:
+              <input
+                type="date"
+                value={date}
+                onChange={handleDateChange}
+                required
+              />
+            </label>
+            <label>
+              Time:
+              <input
+                type="time"
+                value={time}
+                onChange={handleTimeChange}
                 required
               />
             </label>

@@ -1,9 +1,28 @@
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
   background-color: #343a40;
   color: white;
-  padding: 20px;
+  height: 60px;
 }
 
-.contact-info p {
-  margin: 5px 0;
+.left {
+  font-size: 35px;
+  flex: 1;
+  margin-left: 10%;
+  color: #f8f8b6;
+}
+
+.right {
+  text-align: right;
+  font-size: 14px;
+  flex: 1;
+  margin-right: 10%;
+  color: #f8f8b6;
+}
+
+.contact-info {
+  text-align: right; /* Asigură-te că informațiile de contact sunt aliniate la dreapta */
 }

@@ -7,8 +7,8 @@ import "./Header.css";
 const Header = () => {
   return (
     <header className="header">
-      <div className="center">
-        <img src={logo} alt="Little Lemon Logo" className="logo" />
+      <div className="logo">
+        <img src={logo} alt="Little Lemon Logo" />
       </div>
     </header>
   );
