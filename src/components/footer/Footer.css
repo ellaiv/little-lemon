@@ -6,6 +6,8 @@
   background-color: #343a40;
   color: white;
   height: 60px;
+  bottom: 0;
+  width: 100%;
 }
 
 .left {
@@ -24,5 +26,5 @@
 }
 
 .contact-info {
-  text-align: right; /* Asigură-te că informațiile de contact sunt aliniate la dreapta */
+  text-align: right;
 }

@@ -1,0 +1,11 @@
+.form-submitted-container {
+  width: 300px; /* Lățimea chenarului */
+  height: 80px; /* Înălțimea chenarului */
+  border: 2px solid rgb(231, 171, 87); /* Grosimea și culoarea liniei chenarului */
+  background-color: rgb(226, 209, 113); /* Culoarea de fundal a chenarului */
+  position: relative; /* Schimbăm la poziționare relativă */
+  margin: 0 auto; /* Afișăm pe centru */
+  margin-top: 50px; /* Adaugă un spațiu între chenar și bara de navigare */
+  text-align: center; /* Alinierea conținutului în centrul chenarului */
+  padding: 20px; /* Spațierea în interiorul chenarului */
+}

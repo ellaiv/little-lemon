@@ -53,7 +53,7 @@ const MainContent = ({ handleSubmit }) => {
       {!formSubmitted ? (
         <div className="reservation-form-wrapper">
           <img src={siteLogo} alt="Site Logo" className="image" />
-          <h2>Book a table</h2> {/* Mutarea frazei după imagine */}
+          <h2>Book a table</h2>
           <form onSubmit={submitForm} className="reservation-form">
             <label>
               First Name:
