@@ -1,5 +1,5 @@
 .main-content {
-  padding: 30px;
+  padding: 50px;
 }
 
 .image {
@@ -9,7 +9,7 @@
 }
 
 .reservation-form-wrapper {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -18,4 +18,58 @@
 .reservation-form {
   display: flex;
   flex-direction: column;
+  border: 2px solid #1f6f14;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: rgb(218, 241, 149);
+  width: 300px;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.reservation-form label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.reservation-form input {
+  margin-top: 5px;
+  padding: 10px;
+  width: 300px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.submit-button,
+.delete-button {
+  margin-right: 70px;
+  margin-left: 70px;
+  padding: 5px 10px;
+  background-color: #64bb4e;
+  color: rgb(22, 22, 22);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-radius: 5px; /* colțuri rotunjite */
+  cursor: pointer; /* schimbă cursorul la pointer */
+  font-size: 16px; /* setează dimensiunea fontului */
+  width: 70px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
 }

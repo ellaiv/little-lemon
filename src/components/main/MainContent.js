@@ -48,6 +48,15 @@ const MainContent = ({ handleSubmit }) => {
     setTime("");
   };
 
+  const resetForm = () => {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setGuests("");
+    setDate("");
+    setTime("");
+  };
+
   return (
     <>
       {!formSubmitted ? (
@@ -109,9 +118,22 @@ const MainContent = ({ handleSubmit }) => {
                 required
               />
             </label>
-            <button type="submit" onClick={() => setFormSubmitted(true)}>
-              Submit
-            </button>
+            <div className="button-group">
+              <button
+                type="button"
+                className="delete-button"
+                onClick={resetForm}
+              >
+                Delete
+              </button>
+              <button
+                type="submit"
+                className="submit-button"
+                onClick={() => setFormSubmitted(true)}
+              >
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       ) : (
