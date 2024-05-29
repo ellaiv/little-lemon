@@ -48,9 +48,9 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  border-radius: 5px; /* colțuri rotunjite */
-  cursor: pointer; /* schimbă cursorul la pointer */
-  font-size: 16px; /* setează dimensiunea fontului */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
   width: 70px;
 }
 

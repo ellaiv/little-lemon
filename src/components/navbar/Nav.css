@@ -1,21 +1,22 @@
 .nav {
   background-color: rgb(52, 58, 64);
-  padding: 12px 50px;
+  padding: 12px 30px;
   text-align: center;
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
-  width: 100%;
   position: sticky;
   top: 0;
   z-index: 999;
+  width: auto;
 }
 
 .nav-links {
   display: flex;
   flex-grow: 1;
   justify-content: center;
+  align-items: center;
 }
 
 ul {
