@@ -52,10 +52,10 @@ const Nav = () => {
           <a href="#">About</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#footer">Contact</a>
         </li>
         <li>
-          <a href="#">Book a table</a>
+          <a href="#body">Book a table</a>
         </li>
       </ul>
       <div className="right">

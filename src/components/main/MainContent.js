@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import siteLogo from "../../assets/images.jpg";
+import siteLogo3 from "../../assets/littlelemon.jpg";
+import siteLogo2 from "../../assets/littlelemon3.jpg";
 import { FormSubmitted } from "./components/FormSubmitted";
 
 import "./MainContent.css";
@@ -61,8 +63,13 @@ const MainContent = ({ handleSubmit }) => {
     <>
       {!formSubmitted ? (
         <div className="reservation-form-wrapper">
-          <img src={siteLogo} alt="Site Logo" className="image" />
-          <h2>Book a table</h2>
+          <div class="images-container">
+            <img src={siteLogo} alt="Site Logo" className="image" />
+            <img src={siteLogo2} alt="Site Logo2" className="image2" />
+            <img src={siteLogo3} alt="Site Logo3" className="image3" />
+          </div>
+
+          <h2 id="body">Book a table</h2>
           <form onSubmit={submitForm} className="reservation-form">
             <label>
               First Name:
