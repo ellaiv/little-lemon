@@ -1,0 +1,86 @@
+.content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  width: 200px;
+  height: 250px;
+  padding: 40px;
+}
+
+.first,
+.second,
+.third {
+  border: solid;
+  width: 300px;
+  height: 550px;
+  margin-top: 45px;
+  margin-left: 25px;
+  margin-right: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-weight: bold;
+  padding-top: 10px;
+  font-size: 25px;
+}
+
+.p {
+  padding-top: px;
+  font-size: 15px;
+}
+
+.images-container {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.image,
+.image2,
+.image3 {
+  max-width: 30%;
+  height: 300px;
+  width: 800px;
+  animation: moveRightLeft 30s linear infinite;
+}
+
+@keyframes moveRightLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.banner {
+  margin-top: 50px;
+  width: 580px;
+  height: 300px;
+  align-items: center;
+  margin-left: 480px;
+  color: rgb(150, 147, 147);
+  text-align: center;
+  border-radius: 20px;
+  border: 3px solid silver;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+h2 {
+  font-weight: bold;
+  padding-top: 15px;
+  font-size: 45px;
+}
+
+.schedule {
+  text-align: center;
+}

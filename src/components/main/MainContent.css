@@ -2,32 +2,6 @@
   padding: 50px;
 }
 
-.image,
-.image2,
-.image3 {
-  max-width: 30%;
-  height: 300px;
-  width: 800px;
-  animation: moveRightLeft 30s linear infinite;
-}
-
-@keyframes moveRightLeft {
-  0% {
-    transform: translateX(100%);
-  }
-  50% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.images-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .reservation-form-wrapper {
   margin: 5px 0;
   align-items: center;
