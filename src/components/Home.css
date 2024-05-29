@@ -15,7 +15,7 @@
 .third {
   border: solid;
   width: 300px;
-  height: 550px;
+  height: 480px;
   margin-top: 45px;
   margin-left: 25px;
   margin-right: 25px;
@@ -26,12 +26,9 @@
 .text {
   font-weight: bold;
   padding-top: 10px;
-  font-size: 25px;
-}
-
-.p {
-  padding-top: px;
-  font-size: 15px;
+  font-size: 20px;
+  color: white;
+  margin-top: 0px;
 }
 
 .images-container {
@@ -61,10 +58,20 @@
   }
 }
 
+.description {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 5px 10px 10px;
+  text-align: center;
+  height: 85px;
+  border-radius: 10px;
+  background-color: rgb(58, 58, 58);
+}
+
 .banner {
   margin-top: 50px;
   width: 580px;
-  height: 300px;
+  height: 250px;
   align-items: center;
   margin-left: 480px;
   color: rgb(150, 147, 147);
@@ -75,10 +82,15 @@
   overflow: hidden;
 }
 
-h2 {
-  font-weight: bold;
-  padding-top: 15px;
-  font-size: 45px;
+.p {
+  font-size: 10px;
+  color: white;
+}
+
+.banner h2 {
+  font-size: 36px;
+  color: #7d7a7a;
+  /* Alte stiluri */
 }
 
 .schedule {

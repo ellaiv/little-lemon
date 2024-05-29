@@ -67,3 +67,7 @@
 .delete-button:hover {
   background-color: #e53935;
 }
+
+h2 {
+  font-size: 30px;
+}
