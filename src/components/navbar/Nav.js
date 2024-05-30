@@ -1,7 +1,6 @@
 import { Menu as MenuIcon, ShoppingCartOutlined } from "@mui/icons-material";
 import { Badge, IconButton, Menu, MenuItem } from "@mui/material";
 import { useState } from "react";
-
 import "./Nav.css";
 
 const Nav = ({ setDisplayMainContent }) => {
@@ -17,18 +16,21 @@ const Nav = ({ setDisplayMainContent }) => {
     setDisplayMainContent(false);
   };
 
-  const handleAddToCart = (item) => {
-    setCartItems([...cartItems, item]);
+  const handleAddToCart = () => {
+    setCartItems([...cartItems, "Product"]);
     setDisplayMainContent(false);
   };
 
   return (
-    <nav className="nav">
+    <nav className="nav" role="navigation">
       <div className="left">
-        <IconButton style={{ color: "white" }} onClick={handleMenuClick}>
+        <IconButton
+          style={{ color: "white" }}
+          onClick={handleMenuClick}
+          aria-label="menu"
+        >
           <MenuIcon />
         </IconButton>
-
         <Menu
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
@@ -69,7 +71,8 @@ const Nav = ({ setDisplayMainContent }) => {
       <div className="right">
         <IconButton
           style={{ color: "white" }}
-          onClick={() => handleAddToCart("Product")}
+          onClick={handleAddToCart}
+          aria-label="shopping cart"
         >
           <Badge badgeContent={cartItems.length} color="error">
             <ShoppingCartOutlined />
