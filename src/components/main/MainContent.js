@@ -3,7 +3,7 @@ import { FormSubmitted } from "./components/FormSubmitted";
 
 import "./MainContent.css";
 
-const MainContent = ({ handleSubmit }) => {
+const MainContent = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,14 +37,9 @@ const MainContent = ({ handleSubmit }) => {
   };
 
   const submitForm = (e) => {
+    // just to simulate the submission of the form
     e.preventDefault();
-    handleSubmit({ firstName, lastName, email, guests, date, time });
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setGuests("");
-    setDate("");
-    setTime("");
+    resetForm();
   };
 
   const resetForm = () => {

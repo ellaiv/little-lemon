@@ -6,7 +6,8 @@
   position: relative;
   margin: 0 auto;
   margin-top: 50px;
-  text-align: center; /* Alinierea conținutului în centrul chenarului */
-  padding: 20px; /* Spațierea în interiorul chenarului */
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: 20px;
   border-radius: 15px;
 }

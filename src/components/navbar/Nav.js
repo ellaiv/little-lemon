@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import "./Nav.css";
 
-const Nav = () => {
+const Nav = ({ setDisplayMainContent }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [cartItems, setCartItems] = useState([]);
 
@@ -14,14 +14,12 @@ const Nav = () => {
 
   const handleCloseMenu = () => {
     setAnchorEl(null);
-  };
-
-  const handleMenuItemClick = (event) => {
-    handleCloseMenu();
+    setDisplayMainContent(false);
   };
 
   const handleAddToCart = (item) => {
     setCartItems([...cartItems, item]);
+    setDisplayMainContent(false);
   };
 
   return (
@@ -36,26 +34,36 @@ const Nav = () => {
           open={Boolean(anchorEl)}
           onClose={handleCloseMenu}
         >
-          <MenuItem onClick={handleMenuItemClick}>Drinks</MenuItem>
-          <MenuItem onClick={handleMenuItemClick}>Beverages</MenuItem>
-          <MenuItem onClick={handleMenuItemClick}>Salads</MenuItem>
+          <MenuItem onClick={handleCloseMenu}>Drinks</MenuItem>
+          <MenuItem onClick={handleCloseMenu}>Beverages</MenuItem>
+          <MenuItem onClick={handleCloseMenu}>Salads</MenuItem>
         </Menu>
       </div>
       <ul className="nav-links">
         <li>
-          <a href="#home">Home</a>
+          <a href="#home" onClick={() => setDisplayMainContent(false)}>
+            Home
+          </a>
         </li>
         <li>
-          <a href="#">Services</a>
+          <a href="#" onClick={() => setDisplayMainContent(false)}>
+            Services
+          </a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="#" onClick={() => setDisplayMainContent(false)}>
+            About
+          </a>
         </li>
         <li>
-          <a href="#footer">Contact</a>
+          <a href="#footer" onClick={() => setDisplayMainContent(false)}>
+            Contact
+          </a>
         </li>
         <li>
-          <a href="#body">Book a table</a>
+          <a href="#body" onClick={() => setDisplayMainContent(true)}>
+            Book a table
+          </a>
         </li>
       </ul>
       <div className="right">
