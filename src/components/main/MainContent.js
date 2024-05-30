@@ -11,6 +11,32 @@ const MainContent = () => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const validateEmail = (email) => {
+    const re = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!firstName) newErrors.firstName = "First name is required.";
+    if (!lastName) newErrors.lastName = "Last name is required.";
+    if (!email) {
+      newErrors.email = "Email is required.";
+    } else if (!validateEmail(email)) {
+      newErrors.email = "Email is not valid.";
+    }
+    if (!guests) {
+      newErrors.guests = "Number of guests is required.";
+    } else if (isNaN(guests) || guests <= 0) {
+      newErrors.guests = "Guests should be a positive number.";
+    }
+    if (!date) newErrors.date = "Date is required.";
+    if (!time) newErrors.time = "Time is required.";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
@@ -37,9 +63,11 @@ const MainContent = () => {
   };
 
   const submitForm = (e) => {
-    // just to simulate the submission of the form
     e.preventDefault();
-    resetForm();
+    if (validateForm()) {
+      resetForm();
+      setFormSubmitted(true);
+    }
   };
 
   const resetForm = () => {
@@ -49,6 +77,7 @@ const MainContent = () => {
     setGuests("");
     setDate("");
     setTime("");
+    setErrors({});
   };
 
   return (
@@ -65,6 +94,9 @@ const MainContent = () => {
                 onChange={handleFirstNameChange}
                 required
               />
+              {errors.firstName && (
+                <span className="error">{errors.firstName}</span>
+              )}
             </label>
             <label>
               Last Name:
@@ -74,6 +106,9 @@ const MainContent = () => {
                 onChange={handleLastNameChange}
                 required
               />
+              {errors.lastName && (
+                <span className="error">{errors.lastName}</span>
+              )}
             </label>
             <label>
               Email:
@@ -83,15 +118,17 @@ const MainContent = () => {
                 onChange={handleEmailChange}
                 required
               />
+              {errors.email && <span className="error">{errors.email}</span>}
             </label>
             <label>
               Guests:
               <input
-                type="text"
+                type="number"
                 value={guests}
                 onChange={handleGuestsChange}
                 required
               />
+              {errors.guests && <span className="error">{errors.guests}</span>}
             </label>
             <label>
               Date:
@@ -101,6 +138,7 @@ const MainContent = () => {
                 onChange={handleDateChange}
                 required
               />
+              {errors.date && <span className="error">{errors.date}</span>}
             </label>
             <label>
               Time:
@@ -110,6 +148,7 @@ const MainContent = () => {
                 onChange={handleTimeChange}
                 required
               />
+              {errors.time && <span className="error">{errors.time}</span>}
             </label>
             <div className="button-group">
               <button
@@ -119,11 +158,7 @@ const MainContent = () => {
               >
                 Delete
               </button>
-              <button
-                type="submit"
-                className="submit-button"
-                onClick={() => setFormSubmitted(true)}
-              >
+              <button type="submit" className="submit-button">
                 Submit
               </button>
             </div>
