@@ -64,3 +64,65 @@ ul li a:hover {
   display: flex;
   align-items: center;
 }
+
+@media (max-width: 900px) {
+  .nav {
+    padding: 10px 16px;
+    margin-bottom: 30px;
+  }
+
+  li {
+    margin-right: 10px;
+  }
+
+  ul li a {
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+
+  .left .MuiIconButton-root {
+    margin-right: 20px;
+  }
+
+  .right .MuiIconButton-root {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-wrap: wrap;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    gap: 6px;
+  }
+
+  .nav-links {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  li {
+    margin-right: 0;
+  }
+
+  ul li a {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+
+  .left .MuiIconButton-root {
+    margin-right: 0;
+  }
+
+  .right .MuiIconButton-root {
+    margin-left: 0;
+  }
+}
